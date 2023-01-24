@@ -1,6 +1,6 @@
-import { createElement, cts, getDate } from "../helpers/index.js";
+import { createElement, getDate } from "../helpers/index.js";
 
-export default function TotalCard(title, data, icon) {
+export default function Card(title, data, icon) {
     const TEXT = `${title} ${icon}`;
     const AMOUNT = `${data}`;
     const DATE = `${getDate().today()}, ${getDate().year()}`
@@ -9,6 +9,8 @@ export default function TotalCard(title, data, icon) {
     const _title = createElement("h1", "card-title", TEXT).getElm();
     const _totalAmount = createElement("h2", "card-amount", AMOUNT).getElm();
     const _amountDate = createElement("p", "date", DATE).getElm();
+
+
 
     _titleContainer.appendChild(_title);
     _card.appendChild(_titleContainer);

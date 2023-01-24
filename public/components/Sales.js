@@ -1,11 +1,11 @@
 import { createElement, cts, getData, createUser, getDate } from "../helpers/index.js";
+import createTable from "./CreateTable.js";
 
 async function createInfoUser() {
     const newData = await getData(cts.URL)
     const { users } = newData;
     users.map(item => console.log(item))
 }
-createUser().getUser()
 
 export default function sales() {
     const MONTH = getDate().month();
@@ -17,7 +17,7 @@ export default function sales() {
     _salesList.appendChild(_btnToday)
     _salesList.appendChild(_btnWeek)
     _salesList.appendChild(_btnMonth)
-    createInfoUser()
+
     return _salesList
 }
 

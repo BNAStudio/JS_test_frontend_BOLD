@@ -1,19 +1,24 @@
 import cts from './constants.js'
 
-export default function getDate() {
-    const $DATE = new Date();
+export default function getDate(num) {
+    const _DATE = new Date();
     const today = () => {
-        const day = $DATE.getDay();
+        const day = _DATE.getDay();
         return day
     }
-    const month = () => {
-        const month = cts.MONTHS[$DATE.getMonth()];
-        return month
-    }
     const year = () => {
-        const year = $DATE.getFullYear();
+        const year = _DATE.getFullYear();
         return year
     }
-    return { today, month, year }
+    return {
+        today,
+        month() {
+            const month = num ? _DATE.getMonth() : cts.MONTHS[_DATE.getMonth()];
+            return month
+        },
+        year
+    }
+
 }
+
 
