@@ -1,15 +1,15 @@
 
 export default function createUser() {
-    let obj = {
+    const obj = {
         id: null,
         success: null,
         date: '',
         card: '',
     }
 
-    const getUser = () => {
-        return obj;
-    };
-
-    return { getUser }
+    return {
+        getUser() {
+            return obj;
+        }
+    }
 }

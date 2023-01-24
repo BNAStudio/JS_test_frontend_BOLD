@@ -1,6 +1,6 @@
 // import createElement from "./public/helpers/createElement.js";
 import { Header, Card, Sales } from "./public/components/index.js"
-import { createElement, cts } from "./public/helpers/index.js";
+import { cts } from "./public/helpers/index.js";
 
 // import "./db/db.json"
 
@@ -13,5 +13,4 @@ export function App() {
     _mainSection.append(Sales());
     _root.append(Header(cts.LOGO, cts.NAV_ITEMS));
     _root.append(_mainSection);
-
 }
