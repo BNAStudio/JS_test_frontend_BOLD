@@ -1,23 +1,27 @@
 export default function createElement(type, addClass, text, src) {
-    let el = document.createElement(type);
-    el.classList.add(addClass)
-    el.textContent = text
+    const el = document.createElement(type);
+    el.classList.add(addClass);
+    el.textContent = text;
     if (src) el.src = src;
 
     return {
         getElm() {
-            return el
-        }
-        ,
-        setType(type) {
-            el = document.createElement(type)
-            return el
+            return el;
         },
-        setClass(addClass) {
-            return el.classList.add(addClass)
+        setType(newType) {
+            el.setAttribute("type", newType);
         },
-        setText(text) {
-            return el.textContent = text
+        addClass(newClass) {
+            el.classList.add(newClass);
+        },
+        removeClass(removeClass) {
+            el.classList.remove(removeClass);
+        },
+        setText(newText) {
+            el.textContent = newText;
+        },
+        setSrc(newSrc) {
+            el.src = newSrc;
         }
-    }
+    };
 }

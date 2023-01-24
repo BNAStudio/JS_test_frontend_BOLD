@@ -1,4 +1,4 @@
-import { createElement, cts, getData, createUser, getDate } from "../helpers/index.js";
+import { createElement, cts, getData, getDate } from "../helpers/index.js";
 import createTable from "./CreateTable.js";
 
 async function createInfoUser() {

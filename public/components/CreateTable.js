@@ -1,33 +1,18 @@
+import { UserData } from "../classes/index.js";
+import { getCurrentDate } from "../helpers/index.js"
 
-import { cts, createUser, getDate, getData, getTransactionDate } from "../helpers/index.js";
+// const setUser = new UserData();
+// setUser.createUser();
+// const users = setUser.getUsers();
 
-const userOBJ = createUser().getUser();
-let infoUsers = [];
 
-async function createInfoUser() {
-    const newData = await getData(cts.URL)
+// const today = getCurrentDate().today
 
-    const { users } = newData;
+// const todayFilter = new userFilter(today, users)
 
-    users.map(item => {
-        const { id, success, date, payment_method } = item;
-        userOBJ.id = id;
-        userOBJ.success = success;
-        userOBJ.date = date;
-        userOBJ.card = payment_method;
-        infoUsers.push(userOBJ)
-    })
+
+
+
+export default function CreateTable() {
+    return ''
 }
-
-
-document.addEventListener("DOMContentLoaded", createInfoUser);
-
-// TODO: Renderizar tabla de usuarios
-
-export default function createTable() {
-    const user = createUser().getUser()
-    // return console.log(user)
-}
-
-createTable()
-
