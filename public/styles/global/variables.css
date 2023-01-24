@@ -1,0 +1,26 @@
+:root {
+  --primary: #111e6c;
+  --primary-hover: #3247bd;
+  --secundary: #ef434e;
+  --secundary-hover: #d34e56;
+  --grey: #323232;
+  --midLight: #969696;
+  --light: #e5e7ef;
+  --gradient-header: linear-gradient(
+    90deg,
+    hsla(231, 73%, 25%, 1) 64%,
+    hsla(356, 84%, 60%, 1) 100%
+  );
+  --gradient-card: linear-gradient(
+    90deg,
+    rgb(88, 50, 97, 0.9) 50%,
+    rgb(206, 94, 102) 100%
+  );
+  --gradient-sales: linear-gradient(
+    90deg,
+    hsla(231, 73%, 25%, 1) 0%,
+    hsla(333, 47%, 37%, 1) 70%,
+    hsla(350, 55%, 51%, 1) 95%,
+    hsla(356, 84%, 60%, 1) 100%
+  );
+}

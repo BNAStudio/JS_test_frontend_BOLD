@@ -1,0 +1,33 @@
+.c-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: max-content;
+  background-color: var(--light);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 30px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.btn:hover {
+  background-color: var(--midLight);
+  color: var(--primary-hover);
+}
+
+
+
+.btn:focus {
+  color: var(--secundary-hover);
+  background-color: var(--midLight);
+  transform: scale(1.01);
+}

@@ -1,0 +1,5 @@
+@import url("./global/normalize.css");
+@import url("./global/variables.css");
+@import url("./style_components/Header.css");
+@import url("./style_components/Card.css");
+@import url("./style_components/Sales.css");

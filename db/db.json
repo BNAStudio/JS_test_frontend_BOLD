@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "IDs": 1,
+      "success": false,
+      "date": "2022-06-04T17:14:24.000Z",
+      "info_card": "4400 5200 1522 3300",
+      "amount": 25000,
+      "payment_method": {
+        "dataphone": true,
+        "link": false
+      }
+    },
+    {
+      "IDs": 2,
+      "success": true,
+      "date": "2022-06-05T16:20:04.000Z",
+      "info_card": "4400 3600 2566 3633",
+      "amount": 15000,
+      "payment_method": {
+        "dataphone": false,
+        "link": true
+      }
+    },
+    {
+      "IDs": 3,
+      "success": true,
+      "date": "2022-06-05T21:21:45.000Z",
+      "info_card": "4400 2500 7802 5251",
+      "amount": 25000,
+      "payment_method": {
+        "dataphone": false,
+        "link": true
+      }
+    },
+    {
+      "IDs": 4,
+      "success": false,
+      "date": "2022-07-04T12:50:41.000Z",
+      "info_card": "4400 3500 2578 1245",
+      "amount": 30000,
+      "payment_method": {
+        "dataphone": true,
+        "link": false
+      }
+    }
+  ]
+}
