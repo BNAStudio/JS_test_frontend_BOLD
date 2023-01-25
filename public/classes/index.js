@@ -1,6 +1,8 @@
 
-import UserData from "../classes/UserData.js"
+import APICall from "./APICall.js"
+import UserFilter from "./UserFilter.js"
 
 export {
-    UserData
+    APICall,
+    UserFilter
 }

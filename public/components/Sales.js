@@ -1,27 +1,37 @@
-import { createElement, cts, getData, getDate } from "../helpers/index.js";
-import createTable from "./CreateTable.js";
+import { createElement, getDate } from "../helpers/index.js";
+import { APICall } from "../classes/index.js";
+import { UserUI } from "../components/index.js";
 
-async function createInfoUser() {
-    const newData = await getData(cts.URL)
-    const { users } = newData;
-    users.map(item => console.log(item))
-}
+
+// const onClickHandle = () => {
+//     APICall.fetchData().then(item => {
+//         const user = new UserFilter(item)
+//         UserUI(user.userData())
+//     })
+// };
+
+const onClickHandle = () => {
+    APICall.fetchData().then(item => UserUI(item))
+};
 
 export default function sales() {
     const MONTH = getDate().month();
-    const _salesList = createElement("div", "c-list", "").getElm();
+    const _userData = createElement("div", "c-user-data", null).getElm();
     const _btnToday = createElement("button", "btn", "Hoy").getElm();
     const _btnWeek = createElement("button", "btn", "Esta semana").getElm();
     const _btnMonth = createElement("button", "btn", MONTH).getElm();
+    const _checkBox = createElement("button", "btn", MONTH).getElm();
+    const _tableSection = createElement("div", "c-table", null, "table").getElm();
 
-    _salesList.appendChild(_btnToday)
-    _salesList.appendChild(_btnWeek)
-    _salesList.appendChild(_btnMonth)
 
-    return _salesList
+    _btnToday.addEventListener("click", onClickHandle)
+
+    _userData.appendChild(_btnToday)
+    _userData.appendChild(_btnWeek)
+    _userData.appendChild(_btnMonth)
+
+    return _userData
 }
 
-function dateFilter(users) {
-    const dataFilter = users.filter(user => console.log(user))
-}
+
 

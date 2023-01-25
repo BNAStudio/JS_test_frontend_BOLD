@@ -1,9 +1,11 @@
-.c-list {
+.c-user-data {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: max-content;
+  border-radius: 10px;
   background-color: var(--light);
+  box-shadow: 10px 5px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
 .btn {
@@ -23,8 +25,6 @@
   background-color: var(--midLight);
   color: var(--primary-hover);
 }
-
-
 
 .btn:focus {
   color: var(--secundary-hover);

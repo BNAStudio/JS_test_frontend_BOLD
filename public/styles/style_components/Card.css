@@ -26,7 +26,6 @@
   background-color: black;
   background-image: var(--gradient-card);
   background-size: 70%;
-  /* background-repeat: no-repeat; */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
