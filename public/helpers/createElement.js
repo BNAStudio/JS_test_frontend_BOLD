@@ -1,5 +1,6 @@
-export default function createElement(type, addClass, text, src) {
+export default function createElement(type, addClass, text, src, id) {
     const el = document.createElement(type);
+    if(id) el.setAttribute("id", id);
     el.classList.add(addClass);
     el.textContent = text;
     if (src) el.src = src;
