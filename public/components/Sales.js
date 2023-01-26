@@ -1,18 +1,22 @@
 import { createElement, getDate } from "../helpers/index.js";
 import { APICall } from "../classes/index.js";
-import { UserUI } from "../components/index.js";
+import { userUI } from "../components/index.js";
 
-
-// const onClickHandle = () => {
-//     APICall.fetchData().then(item => {
-//         const user = new UserFilter(item)
-//         UserUI(user.userData())
-//     })
-// };
-
-const onClickHandle = () => {
-    APICall.fetchData().then(item => UserUI(item))
+const getData = () => {
+    APICall.fetchData().then(item => userUI(item))
 };
+
+const onClickHandle = (e) => {
+    e.preventDefault();
+    const users = storageObject.getFromLocalStorage("users_info");
+    console.log(users)
+    const filteredUsers = Object.values(users).filter(user => id !== user.id)
+    storageObject.saveLocalStorage("users_info", { [filteredUsers.id]: filteredUsers });
+    userUI(item)
+}
+
+
+document.addEventListener("DOMContentLoaded", getData)
 
 export default function sales() {
     const MONTH = getDate().month();
